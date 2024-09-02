@@ -1,36 +1,34 @@
 body {
-    background-color: pink;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.container {
-    transform: translateY(-20%); /* Move um pouco para cima */
+  position: relative;
+  overflow: hidden;
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-container {
-    margin-top: 20px; /* Espaçamento acima dos botões */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente os botões */
-    gap: 20px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaçamento acima dos botões */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os botões */
+  gap: 20px; /* Espaçamento entre os botões */
 }
 
 .button-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
 }
 
 .button-container button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
