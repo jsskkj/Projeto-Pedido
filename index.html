@@ -14,6 +14,18 @@
             <button id="button2">Não</button>
         </div>
     </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('body');
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                container.appendChild(heart);
+            }
+        });
+    </script>
 </body>
-<script src="script.js"></script>
 </html>

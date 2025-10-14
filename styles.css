@@ -1,38 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
-  position: relative;
-  overflow: hidden;
-  background-color: pink;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #fce4ec;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.button-container {
-  margin-top: 20px; /* Espaçamento acima dos botões */
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente os botões */
-  gap: 20px; /* Espaçamento entre os botões */
-}
-
-.button-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-.button-container button:hover {
-  background-color: #0056b3;
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
-  text-align: center;
+    font-size: 3rem;
+    color: #e91e63;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#button1 {
+    background-color: #4caf50;
+}
+
+#button1:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#button2 {
+    background-color: #f44336;
+}
+
+#button2:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    transform: rotate(-45deg);
+    animation: float 10s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(-45deg);
+        opacity: 0;
+    }
 }
